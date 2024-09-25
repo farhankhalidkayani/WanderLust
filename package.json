@@ -1,0 +1,28 @@
+{
+  "name": "wanderlust",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhankhalidkayani/WanderLust.git"
+  },
+  "author": "Farhan Khalid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/farhankhalidkayani/WanderLust/issues"
+  },
+  "homepage": "https://github.com/farhankhalidkayani/WanderLust#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.6.3",
+    "nodemon": "^3.1.7"
+  }
+}

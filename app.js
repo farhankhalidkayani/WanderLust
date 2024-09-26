@@ -27,7 +27,7 @@ main()
     console.log(err);
   });
 app.get("/", (req, res) => {
-  res.send("<a href='/listings'>All listings</a>");
+  res.redirect("/listings");
 });
 app.get("/listings", async (req, res) => {
   const data = await Listing.find({});

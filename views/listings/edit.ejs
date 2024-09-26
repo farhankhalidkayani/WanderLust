@@ -3,18 +3,63 @@
 <body>
   <h3>Edit your Listing</h3>
   <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
-    <input name="title" value="<%= listing.title %>" type="text" />
-    <br /><br />
-    <textarea name="description"><%= listing.description %></textarea>
-    <br /><br />
-    <input name="image" value="<%= listing.image %>" type="text" />
-    <br /><br />
-    <input name="price" value="<%= listing.price %>" type="number" />
-    <br /><br />
-    <input name="country" value="<%= listing.country %>" type="text" />
-    <br /><br />
-    <input name="location" value="<%= listing.location %>" type="text" />
-    <br /><br />
-    <button>Edit</button>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        name="title"
+        value="<%= listing.title %>"
+        type="text"
+        class="title form-control"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea name="description" class="description form-control">
+<%= listing.description %></textarea
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+
+      <input
+        name="image"
+        value="<%= listing.image %>"
+        type="text"
+        class="image form-control"
+      />
+    </div>
+
+    <div class="row">
+      <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input
+          name="price"
+          value="<%= listing.price %>"
+          type="number"
+          class="price form-control"
+        />
+      </div>
+      <div class="mb-3 col-md-8">
+        <label for="country" class="form-label">Country</label>
+        <input
+          name="country"
+          value="<%= listing.country %>"
+          type="text"
+          class="country form-control"
+        />
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input
+        name="location"
+        value="<%= listing.location %>"
+        type="text"
+        class="location form-control"
+      />
+    </div>
+
+    <button class="btn btn-dark add-btn">Edit</button>
   </form>
 </body>

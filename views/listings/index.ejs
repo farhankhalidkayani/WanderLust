@@ -1,11 +1,25 @@
 <% layout("/layouts/boilerplate") %>
 <body>
   <h1>All listings</h1>
-  <ul>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
     <% for(listing of listings){ %>
-    <li>
-      <a href="/listings/<%= listing._id %>"><%= listing.title %></a>
-    </li>
+    <a href="/listings/<%= listing._id %>" style="text-decoration: none">
+      <div class="card col">
+        <img
+          src="<%= listing.image %>"
+          class="card-img-top"
+          alt="Listing Image"
+          style="height: 20rem"
+        />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= listing.title %></b> <br />
+            &#8360; <%= listing.price.toLocaleString("en-PK") %> / Night
+          </p>
+        </div>
+      </div>
+    </a>
     <% } %>
-  </ul>
+  </div>
 </body>
